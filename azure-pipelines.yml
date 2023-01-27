@@ -16,21 +16,7 @@ stages:
   - stage: "junit"
     displayName: "junit stage"
     jobs:
-      -job: "junitTest"
-        #displayName: "Running unit test"
-        #step:
-         #-script: echo "Running Spring demo app unit test"
-           task: Maven@4
-           inputs:
-             mavenPomFile: 'pom.xml'
-             #goals: 'test'
-             publishJUnitResults: true
-             testResultsFiles: '**/surefire-reports/TEST-*.xml'
-             #codeCoverageToolOption: 'JaCoCo'
-             javaHomeOption: 'JDKVersion'
-             mavenVersionOption: 'Default'
-             mavenAuthenticateFeed: false
-             effectivePomSkip: false
-             sonarQubeRunAnalysis: false
-             checkStyleRunAnalysis: true
-             pmdRunAnalysis: true
+      job: "junitTest"
+        displayName: "Running unit test"
+        step:
+         -script: echo "Running Spring demo app unit test
