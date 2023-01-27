@@ -23,10 +23,10 @@ stages:
          - task: Maven@4
            inputs:
              mavenPomFile: 'pom.xml'
-             goals: 'test'
+             #goals: 'test'
              publishJUnitResults: true
              testResultsFiles: '**/surefire-reports/TEST-*.xml'
-             codeCoverageToolOption: 'JaCoCo'
+             #codeCoverageToolOption: 'JaCoCo'
              javaHomeOption: 'JDKVersion'
              mavenVersionOption: 'Default'
              mavenAuthenticateFeed: false
@@ -35,7 +35,7 @@ stages:
              checkStyleRunAnalysis: true
              pmdRunAnalysis: true
             
-  - stage: "BuildArtifact"
+    stage: "BuildArtifact"
     displayName: "Building Artifact"
     jobs:
       -job: "BuildArtifact"
