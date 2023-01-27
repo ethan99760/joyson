@@ -20,7 +20,7 @@ stages:
         #displayName: "Running unit test"
         #step:
          #-script: echo "Running Spring demo app unit test"
-         - task: Maven@4
+           task: Maven@4
            inputs:
              mavenPomFile: 'pom.xml'
              #goals: 'test'
