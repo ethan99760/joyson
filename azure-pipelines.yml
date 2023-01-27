@@ -15,3 +15,5 @@ pool:
 stages:
   - stage: "junit"
     displayName: "junit stage"
+    jobs:
+      - job: "JunitTest"
