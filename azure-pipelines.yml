@@ -18,5 +18,5 @@ stages:
     jobs:
       job: "junitTest"
         #displayName: "Running unit test"
-        step:
-         -script: echo "Running Spring demo app unit test
+        #step:
+         #-script: echo "Running Spring demo app unit test
